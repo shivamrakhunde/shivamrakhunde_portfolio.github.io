@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/namaskar_logo.jpg" class="logo" alt="Logo" height="80" >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <img src="images/cross.png" alt="" class="fas" height="30px" style="background: white;">
+                </ul>
+                <img src="images/menu_icon.png" alt="" class="fas" height="30px" style="background: white">
+            </nav>
+            <div class="header-text">
+                <!-- <p>UI/UX Designer</p> -->
+                <h1>Hi, I'm <span>Shivam Rakhunde</span> <br> from India.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/photo.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Shivam Rakhunde, a passionate software developer with a knack for crafting efficient and user-friendly solutions. I've honed my skills in CPP, Java, HTML, CSS, JAVASCRIPT, MYSQL, ML and I thrive on challenges that push me to innovate and problem-solve.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/shivamrakhunde">Checkout my GitHub Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/shivamrakhunde">Checkout my GitHub Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/shivamrakhunde">Checkout my GitHub Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <!-- Icons -->
+                    <h2>Web Design</h2>
+                    <a href="https://github.com/shivamrakhunde">Click to know more</a>
+                </div>
+                <div>
+                    <!-- Icons -->
+                    <h2>UI/UX Design</h2>
+                    <a href="https://github.com/shivamrakhunde">Click to know more</a>
+                </div>
+                <div>
+                    <!-- Icons -->
+                    <h2>Machine Learning</h2>
+                    <a href="https://github.com/shivamrakhunde">Click to know more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="sub-title">My Work</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <a href="https://github.com/shivamrakhunde">Click to know more</a>
+                        <!-- Icon -->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Web App</h3>
+                        <a href="https://github.com/shivamrakhunde">Click to know more</a>
+                        <!-- Icon -->
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/shivamrakhunde" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <!-- icon -->
+                    <p>contact@xyz.com</p>
+                    <!-- icon -->
+                    <p>0123456789</p>
+                    <div class="social-icons">
+                        <!-- <a href=""></a> -->
+                    </div>
+                    <a href="images/I2K21103436_Shivam_Rakhunde_Resume.pdf" download class="btn btn2" target="_blank">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <textarea name="Message" placeholder="Your message" rows="6" cols=""></textarea>
+                        <button type="button" class="btn3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Shivam 2024</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
